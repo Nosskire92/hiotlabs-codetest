@@ -1,4 +1,17 @@
 # Hiotlabs Codetest
+
+## Paths
+### /todo/
+* GET /
+* GET /todo/:todoid
+* POST /todo/:todoid
+* DELETE /todo/:todoid
+### /todo/:todoid/notes/
+* GET /todo/:todoid/notes/:noteid
+* PUT /todo/:todoid/notes/:noteid
+* POST /todo/:todoid/notes/:noteid
+* DELETE /todo/:todoid/notes/:noteid
+
 ## BUILD DOCKER IMAGE
 
 ```

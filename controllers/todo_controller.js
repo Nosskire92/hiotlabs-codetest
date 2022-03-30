@@ -16,7 +16,7 @@ const getTodolist = (req, res) => {
     if (!todoLists[req.todoid]){
         return res.status(404).json({message: "Could not find that list"})
     } else {
-        return res.status(200).json({message: todoLists[req.todoid]})
+        return res.status(200).json(todoLists[req.todoid])
     }
 }
 

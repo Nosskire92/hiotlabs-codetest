@@ -33,7 +33,7 @@ router.param("noteid", (req, res, next, noteid) => {
 })
 
 function listLogger(req, res, next){ //Logging format for todo list interactions
-    if (!todoController.todoLists[req.todoid] || !todoController.todoLists[req.todoid]['notes'][req.noteid]){
+    if (!todoController.todoLists[req.todoid]){
         console.log(`Cannot find item with id: ${req.todoid}`)
     } else {
     console.log(`${new Date().toISOString()}: Path: ${req.originalUrl}, Method: ${req.method}, Message: ${ JSON.stringify(todoController.todoLists[req.todoid]) }`)

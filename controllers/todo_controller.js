@@ -26,7 +26,7 @@ const deleteTodolist =  (req, res) => {
         return res.status(404).json({message: "Could not find item with this id"})
     } else {
         todoLists.splice(req.todoid, 1)
-        return res.status(203).json({message: todoLists[req.todoid]})
+        return res.status(200).json({message: todoLists[req.todoid]})
     }
 }
 
@@ -41,7 +41,7 @@ const deleteNote =  (req, res) => {
         return res.status(404).json({message: "Could not find item with this id"})
     } else {
         todoLists[req.todoid]['notes'].splice(req.noteid, 1)
-        return res.status(203).json({message: todoLists[req.todoid]['notes'][req.noteid]})
+        return res.status(200).json({message: todoLists[req.todoid]['notes'][req.noteid]})
     }
 
 }

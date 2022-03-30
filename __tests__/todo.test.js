@@ -48,7 +48,7 @@ describe('/:todoid/notes/:noteid testing', () => {
     test('responds to /:todoid/notes/:noteid DELETE', async () => {
         const res = await request(app).delete('/3/notes/1')
         console.log(res.text)
-        expect(res.statusCode).toBe(203)
+        expect(res.statusCode).toBe(200)
     })
 })
 describe('/:todoid testing', () => {
@@ -58,7 +58,7 @@ describe('/:todoid testing', () => {
     })
     test('responds to /:todoid DELETE', async () => {
         const res = await request(app).delete('/3')
-        expect(res.statusCode).toBe(203)
+        expect(res.statusCode).toBe(200)
     })
 })
 describe('Error testing', () => {

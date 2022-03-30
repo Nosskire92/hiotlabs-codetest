@@ -31,9 +31,13 @@ const deleteTodolist =  (req, res) => {
 }
 
 const createNote = (req, res) => {
+    if(!todoLists[req.todoid] || !todoLists[req.todoid]['notes'][req.noteid]){
+        return res.status(404).json({message: "Could not find item with this id"})
+    } else {
         noteData = req.body.text
         todoLists[req.todoid]['notes'].push(noteData)
         return res.status(201).json({message: noteData})
+    }
 }
 
 const deleteNote =  (req, res) => {

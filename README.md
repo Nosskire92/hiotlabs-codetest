@@ -29,3 +29,4 @@ npm run test
 * Create longer tests, right now i just look for the status code which can be very deceiving. Should also expect some values in the header, the body, the returned data values etc.
 * Improve error handling, both in the code(routes, controllers) and testing of the errors. Right now its very basic.
 * Improve logging, could be more specific depending on action etc.
+* Split up testing into unit and integration testing so we can test against external services like databases.

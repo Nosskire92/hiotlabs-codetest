@@ -1,3 +1,5 @@
+const promClient = require('prom-client');
+
 const gauge = (register) => {
     const g = new promClient.Gauge({
         name: 'node_my_gauge',

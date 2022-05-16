@@ -1,4 +1,4 @@
-
+const promClient = require('prom-client');
 const summary = (register) => {
     const s = new promClient.Summary({
         name: "node_my_summary",

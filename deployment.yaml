@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-metrics
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-metrics
+  template:
+    metadata:
+      annotations:
+        prometheus.io/scrape: 'true'
+        prometheus.io/port: '8080'
+      labels:
+        app: test-metrics
+    spec:
+      containers:
+        - name: test-metrics
+          image: test-metrics:latest
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Never
